@@ -1,0 +1,196 @@
+高堡奇人
+圣诞颂歌
+天蝎大火
+怀疑
+加速度9.8
+雪绒团
+海龟之心
+Moon River
+假装阳光
+花踏风雪
+千柱伊阑
+BD_羊驼_sading
+homoclus
+渡槽
+想变成油库里
+金蟋
+東京海底谷
+西瓜兔
+一个点Point
+49.5升红酒瓶
+魔幻复苏药水
+稀树草原斑纹大蛞蝓
+缄默喑药
+不凋花
+WisL_IDoTL
+瞅瞅你那一串字母啥玩意儿啊
+茕茕孑立
+棒棒杆
+.click
+数字阴影
+十字阴影
+猫草味牛奶
+青钱柳
+红豆杉
+加卡利亚
+泉华
+闪电管石
+面包皮火山弹
+火山毛
+星夜石
+星叶石
+银星石
+夕线
+骨华
+魔法の人形225
+笑忘书
+lust，attracted，attacent
+GrafEq
+相约萨迈拉
+不朽的双螺旋
+from sea to shining sea
+幸福论诞生
+1799年10月3日
+弗里吉亚帽
+pookies
+巴巴亚加
+une rose
+密涅瓦的猫头鹰
+水生的夜思
+女巫安息日夜会之梦
+犹在镜中
+马拉美的星期二
+古玛叶安
+阿派朗
+阿尔卡扎之梦
+Mulvihill
+马孔多小镇
+银之意志金之翼
+交流的无奈
+椅上旅行家
+青空汽水
+Virco9000系列椅
+正午恶魔
+小迷糊情泪
+l’esprit de l’escalier
+个性化定制药物
+I Am The Walrus
+shadow self
+上次的色彩
+伦敦喧闹
+fictoplasm
+First Mover
+辛辛娜
+piezo2
+Piezo2
+星期日
+厄琉息斯秘仪
+千高原
+R.U.R.
+La Main Chaude
+帑姆姆诺优能
+大黑红伞
+女巫的奶水
+解剖维纳斯
+嗅盐瓶
+尸罗
+脑岛
+心灵时光机
+奥黛丽四世
+欢乐毯
+Alarcua
+a murmuration of starlings
+闪光膨胀
+38.1.19.3.14.7
+穆尔提-丙
+Universe 25				//老鼠乌托邦
+E pur si muove			//传说当伽利略离开法庭时，他曾喃喃自语道“E pur si muove”E pur si muove 意为 And yet it moves，指地球确实在动
+列那狐					//《列那狐的故事》是由法国让娜·勒鲁瓦-阿莱改编的童话。
+安息日之羊
+树人的树人
+冥王星之心				//冥王星上的心形区域
+普鲁士蓝
+潜水钟与蝴蝶 			//（多米尼克·鲍比创作随笔） 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.1：计算当前cell内的粒子的作用
+	ii粒子id为正，kk粒子id为正负
+	kk粒子id绝对值大于ii粒子id
+	kk粒子id不在ii粒子id的nonb13里
+	粒子之间距离小于截断距离(若kk粒子id为负，需要对距离进行改动)
+
+2.2：
+	ii粒子id为正，kk粒子id为负(kk取自ii-neigbor1的26相邻cell里)
+	kk粒子id绝对值大于ii粒子id
+	kk粒子id不在ii粒子id的nonb13里
+	粒子之间距离小于截断距离(kk粒子id为负，需要对距离进行改动)
+	(kk in ii-nb14)
+  2.2.1：
+	ii粒子id为正，kk粒子id为负(kk取自ii-neigbor2的13相邻cell里)
+	kk粒子id绝对值大于ii粒子id
+	kk粒子id不在ii粒子id的nonb13里
+	粒子之间距离小于截断距离(kk粒子id为负，需要对距离进行改动)
+	(kk in ii-nb14)
+  2.2.2:
+	kk粒子id为负，ii粒子id为正(ii取自kk-neigbor2的13相邻cell里)
+	kk粒子id绝对值大于ii粒子id
+	k粒子id不在ii粒子id的nonb13里
+	粒子之间距离小于截断距离(kk粒子id为负，需要对距离进行改动)
+	(kk in ii-nb14)
+	
+2.3：
+	ii粒子id为正，kk粒子id为正
+	kk粒子id不在ii粒子id的nonb13里
+	粒子之间距离小于截断距离
+
+
+
+judge3: a ! in b-nb13			//2.1  2.2.1  2.2.2  2.3
+judge4: r <= cutoff				//2.1  2.2.1  2.2.2  2.3
+judge5: a>0 && b<0 && -b>a		//2.2.1  2.2.2
+
+
+RGO
+
+Y
+G
+W
+B
+
+		
+shake	2.9168*(1~3000)	μs
+settle  35.8274 μs
+
+3.14159 26535 89793 23846 26433 832795
+shake	3186.1485		μs
+-------*-------
+nonblist
+若nonblist存在且不需要更新：
+	直接遍历nonblist中的粒子对进行计算
+若nonblist不存在或需要更新：
+	正常计算，并记录下所有需要计算的粒子对
+	
+	
+nstep：MD模拟步数
+nnonb：每多少步生成一次nonblist
