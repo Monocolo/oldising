@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1621236053 source:c:\users\user\desktop\新建文件夹\the old ising's flowing dream\main.cpp
+	<iostream>
+	<math.h>
+	<string.h>
+	<string>
+	<iostream>
+	<windows.h>
+	"page.h"
+	"story.h"
+	"card.h"
+	"player.h"
+	"buffer.h"
+
+1621235908 source:c:\users\user\desktop\新建文件夹\the old ising's flowing dream\page.cpp
+	<string>
+	<iostream>
+	<stdio.h>
+	"page.h"
+	"story.h"
+	"buffer.h"
+
+1621236012 c:\users\user\desktop\新建文件夹\the old ising's flowing dream\page.h
+	<string>
+	"buffer.h"
+
+1621235547 c:\users\user\desktop\新建文件夹\the old ising's flowing dream\story.h
+
+1620806192 source:c:\users\user\desktop\新建文件夹\the old ising's flowing dream\card.cpp
+	<string>
+	<iostream>
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	"story.h"
+	"card.h"
+
+1620806191 c:\users\user\desktop\新建文件夹\the old ising's flowing dream\card.h
+	<string>
+
+1620875896 source:c:\users\user\desktop\新建文件夹\the old ising's flowing dream\player.cpp
+	<stdio.h>
+	<iostream>
+	<string>
+	"story.h"
+	"player.h"
+
+1620875893 c:\users\user\desktop\新建文件夹\the old ising's flowing dream\player.h
+	<string>
+
+1621235685 source:c:\users\user\desktop\新建文件夹\the old ising's flowing dream\buffer.cpp
+	"buffer.h"
+	<stdio.h>
+
+1621235835 c:\users\user\desktop\新建文件夹\the old ising's flowing dream\buffer.h
+	<windows.h>
+
